@@ -1,0 +1,47 @@
+   <div class="btn-toolbar">
+    <div class="btn-group">
+    <a class="btn" href="/messages/new"><img src="/images/Icons/glyphicons_129_message_new.png"> New email</a>
+    </div>
+    </div>   
+      
+  <div class="row">    
+      <div class="span3">
+      <div class="well" style="padding: 8px 0;">
+        <ul class="nav nav-list">
+          <li><a href="#">Inbox</a></li>
+          <li><a href="#">Sent Items</a></li>
+          <li><a href="#">Deleted items</a></li>
+        </ul>
+      </div>
+</div>
+
+<div class="span9">    
+<table class="table table-bordered table-striped table-hover">
+  <thead>
+  <tr>
+    <th>From</th>
+    <th>Subject</th>
+    <th>Body</th>
+    <th>Date</th>
+    <th></th>
+    <th></th>
+  </thead>
+  </tr>
+
+<% @messages.each do |message| %>
+  <tr>
+    <td><%= message.from %></td>
+    <td><%= message.subject %></td>
+    <td><%= message.body %></td>
+    <td><%= message.created_at %></td>
+    <td><%= link_to 'Show', message %></td>
+    <td><%= link_to 'Delete', message, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Message', new_message_path %>
+</div>
+</div>

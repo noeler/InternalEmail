@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  to_id: 1
+  cc_id: 1
+  from_id: 1
+  bcc: 1
+  body: MyText
+  created_at: 2013-02-07 22:29:20
+  deleted_at: 2013-02-07 22:29:20
+  read_at: 2013-02-07 22:29:20
+
+two:
+  title: MyString
+  to_id: 1
+  cc_id: 1
+  from_id: 1
+  bcc: 1
+  body: MyText
+  created_at: 2013-02-07 22:29:20
+  deleted_at: 2013-02-07 22:29:20
+  read_at: 2013-02-07 22:29:20

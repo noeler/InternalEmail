@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<p>
+  <b>To:</b>
+  <%= @message.to %>
+</p>
+
+<p>
+  <b>Cc:</b>
+  <%= @message.cc %>
+</p>
+<p>
+  <b>Subject:</b>
+  <%= @message.subject %>
+</p>
+<p>
+  <b>From:</b>
+  <%= @message.from %>
+</p>
+
+<p>
+  <b>Bcc:</b>
+  <%= @message.bcc %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @message.body %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%= @message.created_at %>
+</p>
+
+<p>
+  <b>Deleted at:</b>
+  <%= @message.deleted_at %>
+</p>
+
+<p>
+  <b>Read at:</b>
+  <%= @message.read_at %>
+</p>
+
+
+<%= link_to 'Back', messages_path %>

@@ -1,0 +1,39 @@
+<h1>Sent messages</h1>
+
+<table>
+  <tr>
+    <th>Subject</th>
+    <th>To</th>
+    <th>Cc</th>
+    <th>From</th>
+    <th>Bcc</th>
+    <th>Body</th>
+    <th>Created at</th>
+    <th>Deleted at</th>
+    <th>Read at</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @messages.each do |message| %>
+  <tr>
+    <td><%= message.subject %></td>
+    <td><%= message.to %></td>
+    <td><%= message.cc %></td>
+    <td><%= message.from %></td>
+    <td><%= message.bcc %></td>
+    <td><%= message.body %></td>
+    <td><%= message.created_at %></td>
+    <td><%= message.deleted_at %></td>
+    <td><%= message.read_at %></td>
+    <td><%= link_to 'Show', message %></td>
+    <td><%= link_to 'Edit', edit_message_path(message) %></td>
+    <td><%= link_to 'Destroy', message, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Message', new_message_path %>
